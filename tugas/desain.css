@@ -1,0 +1,62 @@
+/* Create three equal columns that floats next to each other */
+.column {
+	float: left;
+	width: 50%;
+	padding: 15px;
+	margin-top: 2%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+	.column {
+		width: 100%;
+	}
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+	background: #3B5998;
+	color: white;
+}
+.fa-instagram {
+	background: #f40083;
+	color: white;
+}
+.fa-linkedin {
+	background: #007bb5;
+	color: white;
+}
+
+.gambar {
+	width: 540px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: auto;
+}
