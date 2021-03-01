@@ -1,16 +1,157 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="desain.css">
+	<style>
+		div.gallery {
+			border: 1px solid #ccc;
+		}
+
+		div.gallery:hover {
+			border: 1px solid #777;
+		}
+
+		div.gallery img {
+			width: 100%;
+			height: 200px;
+		}
+
+		div.desc {
+			padding: 15px;
+			text-align: center;
+			font-size: 12px;
+
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		.responsive {
+			padding: 0 6px;
+			float: left;
+			width: 20%;
+			margin-top: 20px;
+		}
+
+		@media only screen and (max-width: 700px) {
+			.responsive {
+				width: 49.99999%;
+				margin: 6px 0;
+			}
+		}
+
+		@media only screen and (max-width: 500px) {
+			.responsive {
+				width: 100%;
+			}
+		}
+
+		.clearfix:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+	</style>
 </head>
 <body>
- <object data="nav.html" width="100%"> </object>
- <div class="gambar">
- 	<img src="Screenshot (11).png">
- 	<img src="Screenshot (11).png">
- 	<img src="Screenshot (11).png">
- 	<img src="Screenshot (11).png">
- </div>
-</body>
+	<object data="nav.html" width="100%"> </object>
+
+
+	<div class="column">
+		<div class="responsive">
+			<div class="gallery">
+				<a target="_blank" href="img/image1.jpg">
+					<img src="img/image1.jpg" >
+				</a>
+				<div class="desc">Add a description of the image here</div>
+			</div>
+		</div>
+
+
+		<div class="responsive">
+			<div class="gallery">
+				<a target="_blank" href="img/image2.png">
+					<img src="img/image2.png" >
+				</a>
+				<div class="desc">Add a description of the image here</div>
+			</div>
+		</div>
+
+		<div class="responsive">
+			<div class="gallery">
+				<a target="_blank" href="img/image3.jpg">
+					<img src="img/image3.jpg" >
+				</a>
+				<div class="desc">Add a description of the image here</div>
+			</div>
+		</div>
+
+		<div class="responsive">
+			<div class="gallery">
+				<a target="_blank" href="img/image4.jpg">
+					<img src="img/image4.jpg" >
+				</a>
+				<div class="desc">Add a description of the image here</div>
+			</div>
+		</div>
+
+		<div class="responsive">
+			<div class="gallery">
+				<a target="_blank" href="img/image4.jpg">
+					<img src="img/image5.jpg" >
+				</a>
+				<div class="desc">Add a description of the image here</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+
+		<div class="column">
+			<div class="responsive">
+				<div class="gallery">
+					<a target="_blank" href="img/image1.jpg">
+						<img src="img/image1.jpg" >
+					</a>
+					<div class="desc">Add a description of the image here</div>
+				</div>
+			</div>
+
+
+			<div class="responsive">
+				<div class="gallery">
+					<a target="_blank" href="img/image2.png">
+						<img src="img/image2.png" >
+					</a>
+					<div class="desc">Add a description of the image here</div>
+				</div>
+			</div>
+
+			<div class="responsive">
+				<div class="gallery">
+					<a target="_blank" href="img/image3.jpg">
+						<img src="img/image3.jpg" >
+					</a>
+					<div class="desc">Add a description of the image here</div>
+				</div>
+			</div>
+
+			<div class="responsive">
+				<div class="gallery">
+					<a target="_blank" href="img/image4.jpg">
+						<img src="img/image4.jpg" >
+					</a>
+					<div class="desc">Add a description of the image here</div>
+				</div>
+			</div>
+
+			<div class="responsive">
+				<div class="gallery">
+					<a target="_blank" href="img/image4.jpg">
+						<img src="img/image5.jpg">
+					</a>
+					<div class="desc">Add a description of the image here</div>
+				</div>
+			</div>
+			<div class="row"></div>
+		</div>
+	</body>
 </html>

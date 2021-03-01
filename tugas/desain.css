@@ -1,3 +1,7 @@
+/* CSS Buat home.html dan about.html */
+
+/* ======================================================================= */
+
 /* Create three equal columns that floats next to each other */
 .column {
 	float: left;
@@ -26,18 +30,22 @@
 	box-sizing: border-box;
 }
 
+/* CSS Buat home.html */
+
+/* ======================================================================= */
+
 .fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 70px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
+	padding: 20px;
+	font-size: 30px;
+	width: 70px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50%;
 }
 
 
 .fa:hover {
-    opacity: 0.7;
+	opacity: 0.7;
 }
 
 .fa-facebook {
@@ -53,6 +61,10 @@
 	color: white;
 }
 
+/* CSS Buat works.html */
+
+/* ======================================================================= */
+
 .gambar {
 	width: 540px;
 	display: flex;
@@ -60,3 +72,45 @@
 	align-items: center;
 	margin: auto;
 }
+
+div.gallery {
+	border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+	border: 1px solid #777;
+}
+
+div.gallery img {
+	width: 100%;
+	height: 200px;
+}
+
+div.desc {
+	padding: 15px;
+	text-align: center;
+	font-size: 12px;
+
+}
+
+.responsive {
+	padding: 0 6px;
+	float: left;
+	width: 20%;
+	margin-top: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+	.responsive {
+		width: 49.99999%;
+		margin: 6px 0;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.responsive {
+		width: 100%;
+	}
+}
+
+
