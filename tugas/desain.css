@@ -1,116 +1,102 @@
-/* CSS Buat home.html dan about.html */
+	/* CSS Buat home.html dan about.html */
 
-/* ======================================================================= */
+	/* ======================================================================= */
 
-/* Create three equal columns that floats next to each other */
-.column {
-	float: left;
-	width: 50%;
-	padding: 15px;
-	margin-top: 2%;
-}
-
-/* Clear floats after the columns */
-.row:after {
-	content: "";
-	display: table;
-	clear: both;
-
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width:600px) {
+	/* Create three equal columns that floats next to each other */
 	.column {
-		width: 100%;
+		float: left;
+		width: 50%;
+		padding: 15px;
+		margin-top: 2%;
 	}
-}
 
+	/* Clear floats after the columns */
+	.row:after {
+		content: "";
+		display: table;
+		clear: both;
 
-* {
-	box-sizing: border-box;
-}
-
-/* CSS Buat home.html */
-
-/* ======================================================================= */
-
-.fa {
-	padding: 20px;
-	font-size: 30px;
-	width: 70px;
-	text-align: center;
-	text-decoration: none;
-	border-radius: 50%;
-}
-
-
-.fa:hover {
-	opacity: 0.7;
-}
-
-.fa-facebook {
-	background: #3B5998;
-	color: white;
-}
-.fa-instagram {
-	background: #f40083;
-	color: white;
-}
-.fa-linkedin {
-	background: #007bb5;
-	color: white;
-}
-
-/* CSS Buat works.html */
-
-/* ======================================================================= */
-
-.gambar {
-	width: 540px;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	margin: auto;
-}
-
-div.gallery {
-	border: 1px solid #ccc;
-}
-
-div.gallery:hover {
-	border: 1px solid #777;
-}
-
-div.gallery img {
-	width: 100%;
-	height: 200px;
-}
-
-div.desc {
-	padding: 15px;
-	text-align: center;
-	font-size: 12px;
-
-}
-
-.responsive {
-	padding: 0 6px;
-	float: left;
-	width: 20%;
-	margin-top: 20px;
-}
-
-@media only screen and (max-width: 700px) {
-	.responsive {
-		width: 49.99999%;
-		margin: 6px 0;
 	}
-}
 
-@media only screen and (max-width: 500px) {
-	.responsive {
-		width: 100%;
+	/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+	@media screen and (max-width:600px) {
+		.column {
+			width: 100%;
+		}
 	}
+
+
+	* {
+		box-sizing: border-box;
+	}
+
+	/* CSS Buat home.html */
+
+	/* ======================================================================= */
+
+	.fa {
+		padding: 20px;
+		font-size: 30px;
+		width: 70px;
+		text-align: center;
+		text-decoration: none;
+		border-radius: 50%;
+	}
+
+
+	.fa:hover {
+		opacity: 0.7;
+	}
+
+	.fa-facebook {
+		background: #3B5998;
+		color: white;
+	}
+	.fa-instagram {
+		background: #f40083;
+		color: white;
+	}
+	.fa-linkedin {
+		background: #007bb5;
+		color: white;
+	}
+
+	/* CSS Buat works.html */
+
+	/* ======================================================================= */
+
+	.gambar {
+		width: 540px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin: auto;
+	}
+
+	/* NAV  */
+
+/* =========================================================================== */
+
+.navul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
 }
 
+.navli {
+  float: left;
+}
 
+.a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.a:hover {
+  background-color: #111;
+}
