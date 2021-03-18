@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<h4>Buat sebuah program kuis! </h4>
+
+	<ul>
+		<li>Tampilkan prompt() untuk meminta inputan dari user. Tampilan teks ‘Sebutkan kepanjangan dari nama IB (Impact Byte)?’</li>
+		<li>Lakukan pengecekan apakah jawaban dari user sudah benar</li>
+		<li> Jika benar, tampilkan alert ‘Selamat jawaban kamu benar’</li>
+		<li>Jika salah, lakukan pengulangan untuk menampilkan prompt() yg sama hingga jawaban dari user benar</li>
+	</ul>
+	<br>
+	<p> Click the button to demonstrate!!</p>
+
+	<button onclick="jawaban()">Coba ajalah!</button>
+
+
+	<script>
+		function jawaban() {
+			var txt = prompt("Sebutkan kepanjangan dari nama IB (Impact Byte)?");
+			while(txt){
+
+				var jawab = txt.toLowerCase();
+				if (jawab == "impact byte")
+				{
+					alert("Selamat jawaban anda benar!");
+					break;
+				}
+				else{
+					txt = prompt("Sebutkan kepanjangan dari nama IB (Impact Byte)?");
+				}
+			}
+		}
+	</script>
+
+</body>
+</html>

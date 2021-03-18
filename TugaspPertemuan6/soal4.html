@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h4>Menampilkan konfirmasi pop up </h4>
+
+  <ul>
+    <li>Berikan teks ‘Apakah anda mau mengulang’ pada box confirm</li>
+    <li>Jika user memilih ‘OK’ maka program akan terus menampilan pop up yang sama </li>
+    <li>Jika user memilih ‘Cancel’ maka program akan menampilkan teks ‘Perulangan sudah dilakukan sebanyak 
+    …(jumlah klik OK yang dilakukan user)</li>
+  </ul>
+
+  <p>Click it!</p>
+
+  <button onclick="Function()"> Try it! </button> <br><br>
+
+  <script>
+    function Function() {
+      var i = 0;
+      var r = confirm("Apakah anda mau mengulang?");
+      while (r) {
+
+        if (r == true){
+         r = confirm("Apakah anda mau mengulang?");
+       }
+
+       if (r == false)
+       {
+        alert(" Perulangan sudah dilakukan sebanyak = " + i + "x");
+      }
+
+      i++;	
+    }
+  }
+</script>
+
+
+</body>
+</html>
