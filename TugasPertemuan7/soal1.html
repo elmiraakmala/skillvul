@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<h4> Nomor 1</h4>
+
+	<ol>
+		<li> Buatlah data array yang berisi minimal 5 pekerjaan dibidang IT (Ex. Front end developer).  </li>
+		<li>Tampilkan panjang data Array,Tampilkan seluruh item pada array</li>
+	</ol>
+
+	<br>
+
+	<p>JAWABAN = </p>
+
+
+	<p id="demo"></p>
+
+	<script>
+		var fruits, text, fLen, i;
+		jobs = ["Web Developer", "Front End Developer", "System Analyst", "Software Developer" , "Hardware Engineer"];
+		JLen = jobs.length;
+		text = "<ul>";
+		for (i = 0; i < JLen; i++) {
+			text += "<li>" + jobs[i] + "</li>";
+		}
+		text += "</ul>";
+
+		document.getElementById("demo").innerHTML = text;
+
+		document.write( "Panjang Array = " + JLen);
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<h2>JavaScript Array.map()</h2>
+
+	<p>Buat sebuah program untuk membuat Array baru dari hasil perkalian array sebelumnya dengan perkalian 5.</p>
+
+	<p> ArrayAwal = [3, 5, 7, 9, 11] </p>
+
+	<b>Array baru = </b>
+
+	<script>
+		var angka = [3, 5, 7, 9, 11];
+		var angka2 = angka.map(perkalian);
+
+		document.write("["+ angka2 + "]");
+
+		function perkalian(value, index, array) {
+			return value * 5;
+		}
+	</script>
+
+</body>
+</html>
