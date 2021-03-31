@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+	.fa {
+		padding: 10px;
+		font-size: 15px;
+		width: 60px;
+		text-align: left;
+		text-decoration: none;
+		border-radius: 10%;
+	}
+	.fa:hover {
+		opacity: 0.7;
+		background: #125688;
+	}
+	.fa-twitter {
+		background:  #007bb5;
+		color: white;
+	}
+</style>
+<body>
+
+	<h4> Nomor 5</h4>
+
+	<ul>
+		<li>Buatlah sebuah aplikasi twitter untuk membuat sebuah tweet dan menampilkannya.
+		</li>
+		<li> Gunakan Array untuk menampung data tweet  </li>
+	</ul>
+
+
+	<h4> Jawaban </h4>
+
+	<textarea id="tweet" rows="4" cols="50"> </textarea>
+	<br>
+	<a href="#" class="fa fa-twitter"  onclick="add_element_to_array()"> Tweet </a>
+	<div id="Result"></div> 
+
+
+<script>
+		var x = 0;
+		//Untuk membuat Array
+		var isi = Array();
+
+		//Buat function untuk add id tweet ke dalam array isi
+		function add_element_to_array()
+		{
+			isi[x] = document.getElementById("tweet").value;
+			 //x di increment untuk menambahkan data ke dalam array isi;
+			 x++;
+			 document.getElementById("tweet").value = "";
+			 
+			 var e = "<hr/>";   
+
+			 //untuk mencentak isi dalam array di dalam innerhtml >> Result
+			 for (var y=0; y<isi.length; y++)
+			 {
+			 	e += `Tweet ${y} =  ${isi[y]} <br/>`;
+			 }
+			 document.getElementById("Result").innerHTML = e;
+		}
+</script>
+
+</body>
+</html>
+

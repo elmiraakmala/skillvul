@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h4> Nomor 2</h4>
+	<ul>
+		<li> Buatlah data array yang berisi nama pada tim teman-teman  </li>
+		<li> Bagi tim menjadi dua orang , lalu tampilkan list data tersebut di halaman HTML</li>
+	</ul>
+	<br>
+
+	<h5>JAWABAN = </h5>
+
+	<script>
+		var text;
+		var tim= ['Elmira', 'Hana', 'Gio', 'Leo'];
+		text = `Seluruh anggota tim = ${tim} <br> `
+		//Membuat tim baru dengan splice , untuk mengambil data pada array[2] dan array[3]
+		var tim_baru = tim.splice(2,3);
+
+
+		tim[0] = tim[0] + ' (leader)'
+		text += "<br> Tim 1 : <br>"
+		text += "<ol>"
+		//Memakai foreach untuk mencetak tim 1
+		// kalau di vb be like  foreach tim1 in tim >> next
+		tim.forEach(tim1 => 
+			{
+				text += `<li> ${tim1} </li>`;
+			}
+		);
+		text += "</ol>"
+
+		tim_baru[0] = tim_baru[0] + ' (Leader)'
+		text += " <br> Tim 2 : <br>"
+		text += "<ol>"
+		//Memakai foreach untuk mencetak tim 2
+		tim_baru.forEach(tim2 => 
+			{
+				text += `<li> ${tim2} </li>`
+			}
+		)
+		text += "</ol>"
+
+		document.write(text);
+	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    form {border: 3px solid #f1f1f1;}
+
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+
+    .container {
+      padding: 16px;
+    }
+
+    span.psw {
+      float: right;
+      padding-top: 16px;
+    }
+
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
+      span.psw {
+       display: block;
+       float: none;
+     }
+
+   }
+ </style>
+</head>
+<body>
+
+  <h2>Registrasi Login Form</h2>
+
+  <div class="container">
+    <!-- Pakai pattern untuk membuat validasi karakter minimal 6 atau lebih, tapi harus pakai form biar berfungsi-->
+    <label for="usrname">Username</label>
+    <input type="text" id="usrname" pattern=".{6,}" name="usrname" title="minimal 6 karakter atau lebih" required>
+
+    <label for="psw">Password</label>
+    <input type="password" id="psw" name="psw"  pattern=".{8,}" title="minimal 8 karakter atau lebih" required>
+
+    <button type="submit" onclick="add_element_to_array()">Login</button>
+  </div>
+  <div id="Result"></div> 
+
+
+<script>
+    var x = 0;
+    var user = Array();
+    var pass = Array();
+
+    //Membuat function untuk menyimpan data dalam array
+    function add_element_to_array()
+    {
+
+      var vl_user = document.getElementById("usrname").value;
+      var vl_pass = document.getElementById("psw").value;
+      var panjang_password = vl_pass.length;
+      var panjang_user = vl_user.length;
+
+      document.getElementById("Result").innerHTML = " Daftar Registrasi yang telah berhasil : <br> <br>";
+
+      // Buat condition untuk validasi minimal karakter, jika valid akan disimpan dalam array dan dicetak pada innerHTML
+      if(panjang_password >= 8 && panjang_user >= 6)
+      {
+       alert("Selamat anda berhasil registrasi!");
+
+
+       user[x] = vl_user;
+       pass[x] = vl_pass;
+       x++;
+    //alert(user.length - 1);
+    
+        var text = "</hr>";
+        
+        //mencetak data array dengan for 
+        for (var y = 0; y <= user.length -1;y++)
+        {
+          text += `Username = ${user[y]} dan Password = ${pass[y]} <br>`;
+        }
+
+        document.getElementById("Result").innerHTML += text;
+      }
+      else
+      {
+        alert("username minimal 6 karakter atau lebih dan password minimal 8 karakter atau lebih");
+      }
+          
+    }
+</script>
+
+</body>
+</html>
