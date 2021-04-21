@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<p>Soal 1</p>
+	<img src="soal1.jpeg" width="600px" height="300px">
+
+	<p id="demo"></p>
+
+	<script>
+//Membuat object dengan nama hewan dan membuat property yang terdiri dari nama,kaki,warna,spesies,makan dan suara
+var hewan = {
+  nama: "Harimau", //string
+  kaki: 4, //int
+  warna: ["Orange","Putih"], //array
+  spesies: "mamalia", //string
+  makan: ["Daging","Non vegetarian"], //array
+  suara: "Hauumm"
+}
+
+var definisi = ["Nama", "Kaki", "Warna","Spesies","Makan","Suara"]; // buat array untuk menampilkan teks depannya
+var text = "";
+var x = 0;
+//mencetak objeck data dengan perulangan
+for (var data_hewan in hewan)
+{		
+	text += `<li> ${definisi[x]} =  ${hewan[data_hewan]} .`
+	x++;
+}
+
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>
